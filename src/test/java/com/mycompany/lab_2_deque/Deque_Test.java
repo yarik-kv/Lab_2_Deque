@@ -46,4 +46,12 @@ public class Deque_Test {
         System.out.println("Success!\n");
          
     }
+    
+    @Test
+    public void testC(){
+        System.out.println("Get rear element : "); 
+        int expected = 10;
+        assertEquals(expected, dq.getRear());
+        System.out.println("Success!\n");
+    }
 }
