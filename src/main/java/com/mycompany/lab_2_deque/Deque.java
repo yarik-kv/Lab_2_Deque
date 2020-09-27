@@ -104,4 +104,55 @@ public class Deque {
         // insert current element into Deque 
         arr[rear] = key ; 
     }
+    
+    // Deletes element at front end of Deque 
+    void deletefront() 
+    { 
+        // check whether Deque is empty or not 
+        if (isEmpty()) 
+        { 
+            System.out.println("Queue Underflow\n"); 
+            return ; 
+        } 
+   
+        // Deque has only one element 
+        if (front == rear) 
+        { 
+            front = -1; 
+            rear = -1; 
+        } 
+        else {
+            // back to initial position 
+            if (front == size -1) {
+                front = 0; 
+            }
+            else{ // increment front by '1' to remove current 
+                // front value from Deque 
+                front = front+1; 
+            }
+        }
+    }
+    
+    // Delete element at rear end of Deque 
+    void deleterear() 
+    { 
+        if (isEmpty()) 
+        { 
+            System.out.println(" Underflow"); 
+            return ; 
+        } 
+   
+        // Deque has only one element 
+        if (front == rear) 
+        { 
+            front = -1; 
+            rear = -1; 
+        } 
+        else if (rear == 0) {
+            rear = size-1; 
+        }
+        else {
+            rear = rear-1; 
+        }
+    }
 }
