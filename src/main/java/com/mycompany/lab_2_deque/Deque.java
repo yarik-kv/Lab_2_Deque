@@ -44,4 +44,64 @@ public class Deque {
     { 
         return (front == -1); 
     }
+    
+    // Inserts an element at front 
+    void insertfront(int key) 
+    { 
+        // check whether Deque if  full or not 
+        if (isFull()) 
+        { 
+            System.out.println("Overflow");  
+            return; 
+        } 
+   
+        // If queue is initially empty 
+        if (front == -1) 
+        { 
+            front = 0; 
+            rear = 0; 
+        } 
+          
+        // front is at first position of queue 
+        else if (front == 0) {
+            front = size - 1 ; 
+        }
+   
+        else {
+// decrement front end by '1' 
+            front = front-1; 
+        }
+   
+        // insert current element into Deque 
+       arr[front] = key ; 
+    }
+    
+    // function to inset element at rear end 
+    // of Deque. 
+    void insertrear(int key) 
+    { 
+        if (isFull()) 
+        { 
+            System.out.println(" Overflow "); 
+            return; 
+        } 
+   
+        // If queue is initially empty 
+        if (front == -1) 
+        { 
+            front = 0; 
+            rear = 0; 
+        } 
+   
+        // rear is at last position of queue 
+        else if (rear == size-1) {
+            rear = 0; 
+        }
+        // increment rear end by '1' 
+        else{
+            rear = rear+1; 
+        }
+        // insert current element into Deque 
+        arr[rear] = key ; 
+    }
 }
