@@ -155,4 +155,28 @@ public class Deque {
             rear = rear-1; 
         }
     }
+    
+    // Returns front element of Deque 
+    int getFront() 
+    { 
+        // check whether Deque is empty or not 
+        if (isEmpty()) 
+        { 
+            System.out.println(" Underflow"); 
+            return -1 ; 
+        } 
+        return arr[front]; 
+    }
+    
+    // function return rear element of Deque 
+    int getRear() 
+    { 
+        // check whether Deque is empty or not 
+        if(isEmpty() || rear < 0) 
+        { 
+            System.out.println(" Underflow\n"); 
+            return -1 ; 
+        } 
+        return arr[rear]; 
+    }
 }
