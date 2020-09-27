@@ -6,6 +6,7 @@
 package com.mycompany.lab_2_deque;
 
 import org.junit.AfterClass;
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -34,5 +35,15 @@ public class Deque_Test {
         boolean expected = true;
         assertEquals(expected,dq.isEmpty());
         System.out.println("Success!\n");
+    }
+    @Test
+    public void testB(){
+        System.out.println("Insert elements at rear end  : '5' and '10' ");
+        int expected[] = new int[]{5,10,0,0,0};
+        dq.insertrear(5);
+        dq.insertrear(10); 
+        assertArrayEquals(expected, dq.arrayShow());
+        System.out.println("Success!\n");
+         
     }
 }
