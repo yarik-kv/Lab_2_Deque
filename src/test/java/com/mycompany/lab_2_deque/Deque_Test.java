@@ -64,4 +64,13 @@ public class Deque_Test {
         assertArrayEquals(expected, dq.arrayShow());
         System.out.println("Success!\n");
     }
+    
+    @Test
+    public void testE(){
+        System.out.println("Delete rear element: "); 
+        int expected = 5;
+        dq.deleterear();
+        assertEquals(expected, dq.getRear());
+        System.out.println("Success!\n");
+    }
 }
