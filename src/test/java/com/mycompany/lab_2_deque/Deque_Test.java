@@ -54,4 +54,14 @@ public class Deque_Test {
         assertEquals(expected, dq.getRear());
         System.out.println("Success!\n");
     }
+    
+    @Test
+    public void testD(){
+        System.out.println("Inserting elements at front end: '15' and '8' "); 
+        int expected[] = new int[]{5,10,0,8,15};
+        dq.insertfront(15);
+        dq.insertfront(8);
+        assertArrayEquals(expected, dq.arrayShow());
+        System.out.println("Success!\n");
+    }
 }
