@@ -81,4 +81,13 @@ public class Deque_Test {
         assertEquals(expected, dq.getFront());
         System.out.println("Success!\n");
     }
+    
+    @Test
+    public void testG(){
+        System.out.println("Delete front element: "); 
+        int expected = 15;
+        dq.deletefront();
+        assertEquals(expected, dq.getFront());
+        System.out.println("Success!\n");
+    }
 }
