@@ -6,8 +6,9 @@
 package com.mycompany.lab_2_deque;
 
 import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.BeforeClass;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -27,5 +28,11 @@ public class Deque_Test {
     public static void tearDownClass() {
         System.out.println("After Class");
     }
-    
+    @Test
+    public void testA(){
+        System.out.println("If deque is empty: "); 
+        boolean expected = true;
+        assertEquals(expected,dq.isEmpty());
+        System.out.println("Success!\n");
+    }
 }
