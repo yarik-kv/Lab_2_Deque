@@ -23,4 +23,12 @@ public class Deque {
         rear = 0; 
         this.size = size; 
     }
+    
+    public int[] arrayShow(){
+       int checkArr[] = new int[this.size];
+       for(int i = 0; i< this.size; i++){
+        checkArr[i] = arr[i];
+       }
+       return checkArr;
+   }
 }
