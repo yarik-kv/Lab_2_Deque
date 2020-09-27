@@ -31,4 +31,17 @@ public class Deque {
        }
        return checkArr;
    }
+    
+    // Checks whether Deque is full or not. 
+    boolean isFull() 
+    { 
+        return ((front == 0 && rear == size-1)|| 
+            front == rear+1); 
+    } 
+   
+    // Checks whether Deque is empty or not. 
+    boolean isEmpty () 
+    { 
+        return (front == -1); 
+    }
 }
