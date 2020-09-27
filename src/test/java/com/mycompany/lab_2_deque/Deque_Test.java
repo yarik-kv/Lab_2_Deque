@@ -90,4 +90,12 @@ public class Deque_Test {
         assertEquals(expected, dq.getFront());
         System.out.println("Success!\n");
     }
+    
+    @Test
+    public void testH(){
+        System.out.println("If deque is full: "); 
+        boolean expected = false;
+        assertEquals(expected,dq.isFull());
+        System.out.println("Success!\n");
+    }
 }
