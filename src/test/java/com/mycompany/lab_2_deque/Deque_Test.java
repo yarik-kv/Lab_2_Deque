@@ -73,4 +73,12 @@ public class Deque_Test {
         assertEquals(expected, dq.getRear());
         System.out.println("Success!\n");
     }
+    
+     @Test
+    public void testF(){
+        System.out.println("Get front element : "); 
+        int expected = 8;
+        assertEquals(expected, dq.getFront());
+        System.out.println("Success!\n");
+    }
 }
