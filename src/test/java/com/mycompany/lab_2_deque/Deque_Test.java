@@ -100,4 +100,12 @@ public class Deque_Test {
         System.out.println("Success!\n");
     }
     
+    @Test(expected = Exception.class)
+    public void testI() throws Exception{
+        System.out.println("Exception");
+    for(int i = 0; i < dq.size; i++){
+        dq.insertfront(15);
+    }
+    
+    }
 }
