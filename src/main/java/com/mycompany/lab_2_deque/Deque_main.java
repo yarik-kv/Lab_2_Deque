@@ -10,7 +10,7 @@ package com.mycompany.lab_2_deque;
  * @author yaroslavtrykoz
  */
 public class Deque_main {
-    public static void main(String[] args) 
+    public static void main(String[] args) throws Exception 
     { 
           
          Deque dq = new Deque(5); 

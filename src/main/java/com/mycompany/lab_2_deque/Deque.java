@@ -46,14 +46,11 @@ public class Deque {
     }
     
     // Inserts an element at front 
-    void insertfront(int key) 
+    void insertfront(int key) throws Exception 
     { 
-        // check whether Deque if  full or not 
-        if (isFull()) 
-        { 
-            System.out.println("Overflow");  
-            return; 
-        } 
+       
+        if (isFull()) throw new Exception("Overflow");
+ 
    
         // If queue is initially empty 
         if (front == -1) 
@@ -78,13 +75,16 @@ public class Deque {
     
     // function to inset element at rear end 
     // of Deque. 
-    void insertrear(int key) 
+    void insertrear(int key) throws Exception 
     { 
-        if (isFull()) 
+        
+        
+        if (isFull()) throw new Exception("Overflow");
+       /* if (isFull()) 
         { 
             System.out.println(" Overflow "); 
             return; 
-        } 
+        } */
    
         // If queue is initially empty 
         if (front == -1) 
@@ -106,14 +106,16 @@ public class Deque {
     }
     
     // Deletes element at front end of Deque 
-    void deletefront() 
+    void deletefront() throws Exception 
     { 
+        
+        if (isEmpty()) throw new Exception("Queue Underflow\n");
         // check whether Deque is empty or not 
-        if (isEmpty()) 
+       /* if (isEmpty()) 
         { 
             System.out.println("Queue Underflow\n"); 
             return ; 
-        } 
+        } */
    
         // Deque has only one element 
         if (front == rear) 
@@ -134,13 +136,15 @@ public class Deque {
     }
     
     // Delete element at rear end of Deque 
-    void deleterear() 
+    void deleterear() throws Exception 
     { 
-        if (isEmpty()) 
+        
+        if (isEmpty()) throw new Exception("Queue Underflow\n");
+       /* if (isEmpty()) 
         { 
             System.out.println(" Underflow"); 
             return ; 
-        } 
+        } */
    
         // Deque has only one element 
         if (front == rear) 

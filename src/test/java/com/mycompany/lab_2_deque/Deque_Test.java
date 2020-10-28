@@ -38,7 +38,7 @@ public class Deque_Test {
         System.out.println("Success!\n");
     }
     @Test
-    public void testB(){
+    public void testB() throws Exception{
         System.out.println("Insert elements at rear end  : '5' and '10' ");
         int expected[] = new int[]{5,10,0,0,0};
         dq.insertrear(5);
@@ -57,7 +57,7 @@ public class Deque_Test {
     }
     
     @Test
-    public void testD(){
+    public void testD() throws Exception{
         System.out.println("Inserting elements at front end: '15' and '8' "); 
         int expected[] = new int[]{5,10,0,8,15};
         dq.insertfront(15);
@@ -67,7 +67,7 @@ public class Deque_Test {
     }
     
     @Test
-    public void testE(){
+    public void testE() throws Exception{
         System.out.println("Delete rear element: "); 
         int expected = 5;
         dq.deleterear();
@@ -84,7 +84,7 @@ public class Deque_Test {
     }
     
     @Test
-    public void testG(){
+    public void testG() throws Exception{
         System.out.println("Delete front element: "); 
         int expected = 15;
         dq.deletefront();
@@ -92,7 +92,7 @@ public class Deque_Test {
         System.out.println("Success!\n");
     }
     
-    @Test
+    @Test 
     public void testH(){
         System.out.println("If deque is full: "); 
         boolean expected = false;
